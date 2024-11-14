@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sweet Delights Cake Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Styles for the login modal */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+        overflow: auto; /* Enable scroll if needed */
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .modal-header {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .login-form input,
+      .login-form button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .login-form button {
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+      }
+
+      .login-form button:hover {
+        background-color: #555;
+      }
+
+      .close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Sweet Delights👩‍🍳</h1>
+        </div>
+        <!-- Hamburger Menu (Checkbox) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About Us </a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="javascript:void(0);" id="loginBtn">Login </a></li>
+          <!-- Login button -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Delicious Cakes for Every Occasion</h2>
+        <p>Made with love and the finest ingredients.</p>
+        <a href="#menu" class="btn">Browse Our Menu 😊</a>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2 class="section-title">
+        <!-- Button with Tasty Emoji -->
+        <center>
+          <button class="tasty-btn">Our Tasty cakes😋🍰</button>
+        </center>
+      </h2>
+      <div class="menu-cakes">
+        <div class="cake">
+          <img src="ca1.jpeg" alt="Cake 1" />
+          <h3>Chocolate Dream</h3>
+          <p>A rich and creamy chocolate cake.</p>
+        </div>
+        <div class="cake">
+          <img src="ca2.webp" alt="Cake 2" />
+          <h3>Vanilla Delight</h3>
+          <p>Soft and fluffy vanilla sponge with a light frosting.</p>
+        </div>
+        <div class="cake">
+          <img src="ca3.jpeg" alt="Cake 3" />
+          <h3>Red Velvet</h3>
+          <p>A smooth, red velvet cake with cream cheese frosting.</p>
+        </div>
+        <div class="cake">
+          <img src="ca4.png" alt="Cake 4" />
+          <h3>Carrot Cake</h3>
+          <p>Moist carrot cake with a creamy frosting and nuts.</p>
+        </div>
+        <div class="cake">
+          <img src="ca5.png" alt="Cake 5" />
+          <h3>Strawberry Shortcake</h3>
+          <p>Light and fluffy with fresh strawberries and whipped cream.</p>
+        </div>
+        <div class="cake">
+          <img src="ca6.png" alt="Cake 6" />
+          <h3>Lemon Cheesecake</h3>
+          <p>A creamy cheesecake with a zesty lemon flavor.</p>
+        </div>
+        <div class="cake">
+          <img src="ca7.png" alt="Cake 7" />
+          <h3>Chocolate Mousse</h3>
+          <p>Rich and creamy chocolate mousse topped with ganache.</p>
+        </div>
+        <div class="cake">
+          <img src="ca8.png" alt="Cake 8" />
+          <h3>Black Forest</h3>
+          <p>A decadent chocolate cake with cherries and whipped cream.</p>
+        </div>
+        <div class="cake">
+          <img src="ca9.png" alt="Cake 8" />
+          <h3>White Forest</h3>
+          <p>A decadent chocolate cake with cherries and whipped cream.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">About Us 📚</h2>
+      <p>
+        At Sweet Delights, we specialize in making cakes that not only look
+        beautiful but taste absolutely divine. Every cake is freshly baked with
+        high-quality ingredients.
+      </p>
+
+      <!-- Image Container for Centering -->
+      <div class="image-container">
+        <img src="a1.png" alt="Image 1" class="rounded-image" />
+        <img src="a2.png" alt="Image 2" class="rounded-image" />
+        <img src="a3.png" alt="Image 3" class="rounded-image" />
+        <img src="a4.png" alt="Image 4" class="rounded-image" />
+        <img src="ca3.jpeg" alt="Image 5" class="rounded-image" />
+      </div>
+
+      <!--services-->
+    </section>
+    <section id="services">
+      <h2 class="section-title">Our Services 🚚</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <img src="s1.png" alt="Cake Delivery" class="service-icon" />
+          <h3>Fast Cake Delivery 🚚</h3>
+          <p>
+            We offer quick and reliable cake delivery right to your doorstep.
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="s2.png" alt="Custom Cakes" class="service-icon" />
+          <h3>Custom Cakes 🎨</h3>
+          <p>
+            Personalized cakes designed for any occasion, from birthdays to
+            weddings.
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="s3.png" alt="Birthday Cakes" class="service-icon" />
+          <h3>Birthday Cakes 🎂</h3>
+          <p>
+            Specially designed cakes for your loved one's birthday celebration.
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="s4.png" alt="Wedding Cakes" class="service-icon" />
+          <h3>Wedding Cakes 💍</h3>
+          <p>
+            Beautiful and elegant wedding cakes to make your big day
+            unforgettable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Contact Us 📞</h2>
+      <form action="#" method="POST" class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeBtn">&times;</span>
+        <h2 class="modal-header">Login</h2>
+        <form action="#" method="POST" class="login-form">
+          <input type="email" placeholder="Enter your email" required />
+          <input type="password" placeholder="Enter your password" required />
+          <button type="submit">Login</button>
+          <p>Don't have an account? <a href="#">Sign up</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Sweet Delights Cake Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // Get modal element
+      var modal = document.getElementById("loginModal");
+      var loginBtn = document.getElementById("loginBtn");
+      var closeBtn = document.getElementById("closeBtn");
+
+      // Show the modal
+      loginBtn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // Close the modal
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Close the modal if user clicks outside of it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
